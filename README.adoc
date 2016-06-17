@@ -1,4 +1,7 @@
 = jekyll-asciidoc-docker
+:docker: https://www.docker.com/[Docker]
+:jekyll: https://jekyllrb.com/[Jekyll]
+:asciidoctor: http://asciidoctor.org/[AsciiDoctor]
 
-Docker image for creating static sites from Asciidoc files using Jekyll and AsciiDoctor.
+{docker} image for creating static sites from Asciidoc files using {jekyll} and {asciidoctor}.
 
