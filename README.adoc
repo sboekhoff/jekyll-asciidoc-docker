@@ -1,7 +1,18 @@
-= jekyll-asciidoc-docker
+= Docker image: boekhoff/jekyll-asciidoc
 :link-docker: https://www.docker.com/[Docker]
 :link-jekyll: https://jekyllrb.com/[Jekyll]
 :link-asciidoctor: http://asciidoctor.org/[AsciiDoctor]
 
 {link-docker} image for creating static sites from Asciidoc files using {link-jekyll} and {link-asciidoctor}.
+
+== Usage
+
+The image itself is hosted by https://hub.docker.com/r/boekhoff/jekyll-asciidoc/[DockerHub].
+Thus, you can pull it by using the following terminal command:
+
+[source,ruby]
+.Command to pull the image from DockerHub.
+----
+docker pull boekhoff/jekyll-asciidoc
+----
 
