@@ -1,5 +1,6 @@
 = Docker image: boekhoff/jekyll-asciidoc
 :link-docker: https://www.docker.com/[Docker]
+:link-dockerhub: https://hub.docker.com[DockerHub]
 :link-jekyll: https://jekyllrb.com/[Jekyll]
 :link-asciidoctor: http://asciidoctor.org/[AsciiDoctor]
 
@@ -7,10 +8,11 @@
 
 == Usage
 
-The image itself is hosted by https://hub.docker.com/r/boekhoff/jekyll-asciidoc/[DockerHub].
+The image itself is hosted as https://hub.docker.com/r/boekhoff/jekyll-asciidoc/[boekhoff/jekyll-asciidoc]
+on {link-dockerhub}.
 Thus, you can pull it by using the following terminal command:
 
-[source,ruby]
+[source,]
 .Command to pull the image from DockerHub.
 ----
 docker pull boekhoff/jekyll-asciidoc
