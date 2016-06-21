@@ -6,6 +6,22 @@
 
 {link-docker} image for creating static sites from Asciidoc files using {link-jekyll} and {link-asciidoctor}.
 
+== Tags (+ installed software)
+
+Tags resemble the version of the installed
+https://github.com/asciidoctor/jekyll-asciidoc[jekyll-asciidoc] release.
+
+* `1.1.2`: https://rubygems.org/gems/asciidoctor/versions/1.5.4[AsciiDoctor 1.5.4], https://rubygems.org/gems/jekyll-asciidoc/versions/1.1.2[jekyll-asciidoc 1.1.2]
+* `latest`: For latest versions see https://rubygems.org/gems/asciidoctor[AsciiDoctor], and https://rubygems.org/gems/jekyll-asciidoc[jekyll-asciidoc]
+
+This {link-dockerhub} repository is build upon Jekyll's official Docker image
+(https://hub.docker.com/r/jekyll/jekyll/[jekyll/jekyll]).
+Changes in the following repositories trigger a new build:
+
+* https://hub.docker.com/r/asciidoctor/docker-asciidoctor/[asciidoctor/docker-asciidoctor]
+* https://hub.docker.com/r/jekyll/jekyll/[jekyll/jekyll]
+
+
 == Usage
 
 The image itself is hosted as https://hub.docker.com/r/boekhoff/jekyll-asciidoc/[boekhoff/jekyll-asciidoc]
