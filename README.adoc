@@ -5,8 +5,8 @@
 :link-asciidoctor: http://asciidoctor.org/[AsciiDoctor]
 :link-image: https://hub.docker.com/r/boekhoff/jekyll-asciidoc/[boekhoff/jekyll-asciidoc]
 
-This repository contains Dockerfiles for automated builds of the Docker images
-{link-image} on {link-dockerhub}.
+This Git repository contains Dockerfiles for automated builds of Docker images
+that are hosted as {link-image} on {link-dockerhub}.
 
 The images are equipped with software for creating static sites from Asciidoc
 files using {link-jekyll} and {link-asciidoctor}.
@@ -15,7 +15,8 @@ files using {link-jekyll} and {link-asciidoctor}.
 
 The {link-image}-images are build upon Jekyll's official Docker image
 (https://hub.docker.com/r/jekyll/jekyll/[jekyll/jekyll]).
-Changes in the following repositories trigger a new build:
+Changes in the following DockerHub repositories trigger a new automatic build
+of the images:
 
 * https://hub.docker.com/r/asciidoctor/docker-asciidoctor/[asciidoctor/docker-asciidoctor]
 * https://hub.docker.com/r/jekyll/jekyll/[jekyll/jekyll]
