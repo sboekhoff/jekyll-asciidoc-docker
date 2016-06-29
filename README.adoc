@@ -4,11 +4,9 @@
 :link-jekyll: https://jekyllrb.com/[Jekyll]
 :link-asciidoctor: http://asciidoctor.org/[AsciiDoctor]
 :link-image: https://hub.docker.com/r/boekhoff/jekyll-asciidoc/[boekhoff/jekyll-asciidoc]
-:link-gitlab-pages: https://pages.gitlab.io/[GitLab pages]
-:link-gitlab-runner: https://gitlab.com/gitlab-org/gitlab-ci-multi-runner[GitLab runner]
 
 This repository contains Dockerfiles for automated builds of the Docker images
-"{link-image}" on {link-dockerhub}.
+{link-image} on {link-dockerhub}.
 
 The images are equipped with software for creating static sites from Asciidoc
 files using {link-jekyll} and {link-asciidoctor}.
@@ -43,15 +41,3 @@ Thus, you can pull an images by using the following terminal command:
 ----
 docker pull boekhoff/jekyll-asciidoc
 ----
-
-== Use image for GitLab-CI runners
-
-You might want to use {link-image} to build your {link-gitlab-pages} from Asciidoc content.
-The following section shows you how to setup a {link-gitlab-runner} that uses Docker
-(with the image {link-image}) as an executor.
-
-Moreover  I will not install the Runner on your (virtual) machine
-or install the runner but the runner itself will be started in a docker container.
-
-https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/docs/install/docker.md
-
