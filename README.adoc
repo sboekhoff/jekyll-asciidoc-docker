@@ -9,8 +9,8 @@
 :link-alpinelinux: https://www.alpinelinux.org/[Alpine Linux]
 :link-gitlab-pages: https://pages.gitlab.io/[GitLab pages]
 :link-gitlab-runner: https://gitlab.com/gitlab-org/gitlab-ci-multi-runner[GitLab runner]
-:link-use-jekyll-asciidoc-for-gitlab-pages: https://github.com/asciidoctor/jekyll-asciidoc#using-this-plugin-on-gitlab-pages[documentation in README of jekyll-asciidoc]
-:link-install-runner-using-docker: https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/docs/install/docker.md[installation guide on gitLab]
+:link-use-jekyll-asciidoc-for-gitlab-pages: https://github.com/asciidoctor/jekyll-asciidoc#using-this-plugin-on-gitlab-pages[documentation in the README of jekyll-asciidoc]
+:link-install-runner-using-docker: https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/docs/install/docker.md[installation guide on GitLab]
 
 This Git repository contains Dockerfiles for automated builds of Docker images
 that are hosted as {link-image} on {link-dockerhub}.
@@ -57,7 +57,7 @@ docker pull boekhoff/jekyll-asciidoc
 
 If you store the sources for a webpage on {link-gitlab} and you want to deploy
 it to {link-gitlab-pages}, you can easily make use of shared runners provided
-by GitLab (see {link-use-jekyll-asciidoc-for-gitlab-pages}).
+by GitLab (see the {link-use-jekyll-asciidoc-for-gitlab-pages}).
 If shared runners are to slow and/or you don't want to install all dependencies
 each time you run a build, you can use {link-image} to set up a
 {link-gitlab-runner} on your own machine.
@@ -84,10 +84,9 @@ sudo docker run \
 gitlab/gitlab-runner:alpine
 ----
 
-. Open a shell to the running container and start runner configuration:
+. Open a shell to the running container and start the runner configuration:
 +
 [source,]
-.runner konfigurieren
 ----
 sudo docker exec \
 -ti \
@@ -103,7 +102,7 @@ Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/ci):
 https://gitlab.com/ci
 
 Please enter the gitlab-ci token for this runner:
-[FIXME: Enter your token from GitLabs runner configuration]
+[FIXME: Enter the 'Runner token' from your project settings.]
 
 Please enter the gitlab-ci description for this runner:
 [############]: Runner on machine ABC in office XYZ
