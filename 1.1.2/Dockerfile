@@ -5,10 +5,9 @@ FROM jekyll/jekyll
 
 # Install:
 RUN \
-  # http://asciidoctor.org/
-  # https://github.com/asciidoctor/asciidoctor
-  # https://rubygems.org/gems/asciidoctor/versions/1.5.4
-  gem install asciidoctor -v 1.5.4 &&\
+  # https://github.com/tmm1/pygments.rb
+  # https://rubygems.org/gems/pygments.rb/versions/0.6.3
+  gem install pygments.rb -v 0.6.3 &&\
   # https://github.com/asciidoctor/jekyll-asciidoc
   # https://rubygems.org/gems/jekyll-asciidoc/versions/1.1.2
   gem install jekyll-asciidoc -v 1.1.2

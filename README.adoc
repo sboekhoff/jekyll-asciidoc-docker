@@ -32,14 +32,15 @@ The tags used by {link-image} resemble the version of the installed
 https://github.com/asciidoctor/jekyll-asciidoc[jekyll-asciidoc] release.
 
 * `2.0.0`:
-  https://rubygems.org/gems/jekyll-asciidoc/versions/2.0.0[jekyll-asciidoc 2.0.0]
-  https://rubygems.org/gems/asciidoctor/versions/1.5.4[AsciiDoctor 1.5.4],
+  https://rubygems.org/gems/jekyll-asciidoc/versions/2.0.0[jekyll-asciidoc 2.0.0],
+  https://rubygems.org/gems/pygments.rb/versions/0.6.3[pygments.rb 0.6.3]
 * `1.1.2`:
-  https://rubygems.org/gems/jekyll-asciidoc/versions/1.1.2[jekyll-asciidoc 1.1.2]
-  https://rubygems.org/gems/asciidoctor/versions/1.5.4[AsciiDoctor 1.5.4],
+  https://rubygems.org/gems/jekyll-asciidoc/versions/1.1.2[jekyll-asciidoc 1.1.2],
+  https://rubygems.org/gems/pygments.rb/versions/0.6.3[pygments.rb 0.6.3]
 * `latest`: For latest versions see
-  https://rubygems.org/gems/asciidoctor[AsciiDoctor]
-  and https://rubygems.org/gems/jekyll-asciidoc[jekyll-asciidoc]
+  https://rubygems.org/gems/jekyll-asciidoc[jekyll-asciidoc] and
+  https://rubygems.org/gems/pygments.rb[pygments.rb]
+
 
 
 == Usage
@@ -94,7 +95,9 @@ myRunner \
 gitlab-runner register
 ----
 
-. Follow the installation instructions. Example:
+. Follow the installation instructions.
+This example uses settings for a project hosted on {link-gitlab}.
+Therefore the gitlab-ci coordinator URL is https://gitlab.com/ci.
 +
 [source,]
 ----
