@@ -1,9 +1,16 @@
 = Docker image: boekhoff/jekyll-asciidoc
 :link-docker: https://www.docker.com/[Docker]
-:link-dockerhub: https://hub.docker.com[DockerHub]
+:link-dockerhub: https://hub.docker.com/[DockerHub]
 :link-jekyll: https://jekyllrb.com/[Jekyll]
 :link-asciidoctor: http://asciidoctor.org/[AsciiDoctor]
 :link-image: https://hub.docker.com/r/boekhoff/jekyll-asciidoc/[boekhoff/jekyll-asciidoc]
+:link-image-gitlabcirunner: https://hub.docker.com/r/gitlab/gitlab-runner/[gitlab/gitlab-runner]
+:link-gitlab: https://gitlab.com/[GitLab]
+:link-alpinelinux: https://www.alpinelinux.org/[Alpine Linux]
+:link-gitlab-pages: https://pages.gitlab.io/[GitLab pages]
+:link-gitlab-runner: https://gitlab.com/gitlab-org/gitlab-ci-multi-runner[GitLab runner]
+:link-use-jekyll-asciidoc-for-gitlab-pages: https://github.com/asciidoctor/jekyll-asciidoc#using-this-plugin-on-gitlab-pages[documentation in README of jekyll-asciidoc]
+:link-install-runner-using-docker: https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/docs/install/docker.md[installation guide on gitLab]
 
 This Git repository contains Dockerfiles for automated builds of Docker images
 that are hosted as {link-image} on {link-dockerhub}.
@@ -45,3 +52,73 @@ Thus, you can pull an image by using the following terminal command:
 ----
 docker pull boekhoff/jekyll-asciidoc
 ----
+
+=== Use image for GitLab-CI runner
+
+If you store the sources for a webpage on {link-gitlab} and you want to deploy
+it to {link-gitlab-pages}, you can easily make use of shared runners provided
+by GitLab (see {link-use-jekyll-asciidoc-for-gitlab-pages}).
+If shared runners are to slow and/or you don't want to install all dependencies
+each time you run a build, you can use {link-image} to set up a
+{link-gitlab-runner} on your own machine.
+The advantage is that {link-image} is already equipped with (all) dependencies
+required to build webpages from Asciidoc content.
+
+The following section shows you how to setup a {link-gitlab-runner} in a
+{link-docker}-container that in addition uses Docker (with a container from the
+lastest image of {link-image}) as an executor.
+Also refer to the {link-install-runner-using-docker} for additional options.
+
+. Start a GitLab container using the official Docker image for GitLab runners
+  ({link-image-gitlabcirunner}).
+  Here I use the {link-alpinelinux} based image because of it's small footprint.
++
+[source,]
+----
+sudo docker run \
+-d \
+--name myRunner \
+--restart always \
+-v /srv/gitlab-runner/config:/etc/gitlab-runner \
+-v /var/run/docker.sock:/var/run/docker.sock \
+gitlab/gitlab-runner:alpine
+----
+
+. Open a shell to the running container and start runner configuration:
++
+[source,]
+.runner konfigurieren
+----
+sudo docker exec \
+-ti \
+myRunner \
+gitlab-runner register
+----
+
+. Follow the installation instructions. Example:
++
+[source,]
+----
+Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com/ci):
+https://gitlab.com/ci
+
+Please enter the gitlab-ci token for this runner:
+[FIXME: Enter your token from GitLabs runner configuration]
+
+Please enter the gitlab-ci description for this runner:
+[############]: Runner on machine ABC in office XYZ
+
+Please enter the gitlab-ci tags for this runner (comma separated):
+docker,jekyll-asciidoc,asciidoctor,jekyll,alpine
+Registering runner... succeeded                     runner=[########]
+
+Please enter the executor: docker+machine, docker-ssh+machine, docker, docker-ssh, parallels, shell, ssh, virtualbox:
+docker
+
+Please enter the default Docker image (eg. ruby:2.1):
+boekhoff/jekyll-asciidoc
+----
+
+. DONE. The configuration of the runner is stored in:
+  `/srv/gitlab-runner/config/config.toml`
+
