@@ -15,8 +15,8 @@ files using {link-jekyll} and {link-asciidoctor}.
 
 The {link-image}-images are build upon Jekyll's official Docker image
 (https://hub.docker.com/r/jekyll/jekyll/[jekyll/jekyll]).
-Changes in the following DockerHub repositories trigger a new automatic build
-of the images:
+Changes in the following DockerHub repositories trigger an automated build of
+the images:
 
 * https://hub.docker.com/r/asciidoctor/docker-asciidoctor/[asciidoctor/docker-asciidoctor]
 * https://hub.docker.com/r/jekyll/jekyll/[jekyll/jekyll]
@@ -24,9 +24,12 @@ of the images:
 The tags used by {link-image} resemble the version of the installed
 https://github.com/asciidoctor/jekyll-asciidoc[jekyll-asciidoc] release.
 
-* `1.1.2`:
+* `2.0.0`:
+  https://rubygems.org/gems/jekyll-asciidoc/versions/2.0.0[jekyll-asciidoc 2.0.0]
   https://rubygems.org/gems/asciidoctor/versions/1.5.4[AsciiDoctor 1.5.4],
+* `1.1.2`:
   https://rubygems.org/gems/jekyll-asciidoc/versions/1.1.2[jekyll-asciidoc 1.1.2]
+  https://rubygems.org/gems/asciidoctor/versions/1.5.4[AsciiDoctor 1.5.4],
 * `latest`: For latest versions see
   https://rubygems.org/gems/asciidoctor[AsciiDoctor]
   and https://rubygems.org/gems/jekyll-asciidoc[jekyll-asciidoc]
@@ -35,7 +38,7 @@ https://github.com/asciidoctor/jekyll-asciidoc[jekyll-asciidoc] release.
 == Usage
 
 The Docker images are hosted as {link-image} on {link-dockerhub}.
-Thus, you can pull an images by using the following terminal command:
+Thus, you can pull an image by using the following terminal command:
 
 [source,]
 .Command to pull the latest image from DockerHub.
