@@ -20,27 +20,23 @@ files using {link-jekyll} and {link-asciidoctor}.
 
 == Tags (+ installed software)
 
-The {link-image}-images are build upon Ruby's official Docker image
-(https://hub.docker.com/_/ruby/[ruby]).
+The {link-image}-images are build upon Jekyll's official Docker image
+(https://hub.docker.com/r/jekyll/jekyll/[jekyll/jekyll]).
 Changes in the following DockerHub repositories trigger an automated build of
 the images:
 
 * https://hub.docker.com/r/asciidoctor/docker-asciidoctor/[asciidoctor/docker-asciidoctor]
 * https://hub.docker.com/r/jekyll/jekyll/[jekyll/jekyll]
-* https://hub.docker.com/_/ruby/[ruby]
 
 The tags used by {link-image} resemble the version of the installed
 https://github.com/asciidoctor/jekyll-asciidoc[jekyll-asciidoc] release.
 
 * `2.0.0`:
-  https://rubygems.org/gems/jekyll-asciidoc/versions/2.0.0[jekyll-asciidoc 2.0.0],
-  https://rubygems.org/gems/pygments.rb/versions/0.6.3[pygments.rb 0.6.3]
+  https://rubygems.org/gems/jekyll-asciidoc/versions/2.0.0[jekyll-asciidoc 2.0.0]
 * `1.1.2`:
-  https://rubygems.org/gems/jekyll-asciidoc/versions/1.1.2[jekyll-asciidoc 1.1.2],
-  https://rubygems.org/gems/pygments.rb/versions/0.6.3[pygments.rb 0.6.3]
+  https://rubygems.org/gems/jekyll-asciidoc/versions/1.1.2[jekyll-asciidoc 1.1.2]
 * `latest`: For latest versions see
-  https://rubygems.org/gems/jekyll-asciidoc[jekyll-asciidoc] and
-  https://rubygems.org/gems/pygments.rb[pygments.rb]
+  https://rubygems.org/gems/jekyll-asciidoc[jekyll-asciidoc]
 
 
 
