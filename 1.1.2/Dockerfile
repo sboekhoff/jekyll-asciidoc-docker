@@ -3,12 +3,19 @@
 # https://github.com/jekyll/docker
 FROM jekyll/jekyll
 
-# Install:
 RUN \
+  # Install tools required to build pygments.rb
+  apk --update add build-base ruby-dev && \
+  #
+  # Install pygments.rb syntax highlighter
   # https://github.com/tmm1/pygments.rb
   # https://rubygems.org/gems/pygments.rb/versions/0.6.3
-  #gem install pygments.rb -v 0.6.3 &&\
+  gem install pygments.rb -v 0.6.3 && \
+  # Install jekyll-asciidoc (also adds asciidoctor)
   # https://github.com/asciidoctor/jekyll-asciidoc
   # https://rubygems.org/gems/jekyll-asciidoc/versions/1.1.2
-  gem install jekyll-asciidoc -v 1.1.2
+  gem install jekyll-asciidoc -v 1.1.2 && \
+  #
+  # Remove tools required to build pygments.rb
+  apk del build-base ruby-dev
 
