@@ -7,6 +7,8 @@ RUN \
   # Install tools required to build pygments.rb
   apk --update add build-base ruby-dev && \
   #
+  # Install Python, which is required by pygments.rb
+  apk --update add python && \
   # Install pygments.rb syntax highlighter
   # https://github.com/tmm1/pygments.rb
   # https://rubygems.org/gems/pygments.rb
