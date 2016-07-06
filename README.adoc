@@ -31,6 +31,9 @@ the images:
 The tags used by {link-image} resemble the version of the installed
 https://github.com/asciidoctor/jekyll-asciidoc[jekyll-asciidoc] release.
 
+* `2.0.1`:
+  https://rubygems.org/gems/jekyll-asciidoc/versions/2.0.1[jekyll-asciidoc 2.0.1],
+  https://rubygems.org/gems/pygments.rb/versions/0.6.3[pygments.rb 0.6.3]
 * `2.0.0`:
   https://rubygems.org/gems/jekyll-asciidoc/versions/2.0.0[jekyll-asciidoc 2.0.0],
   https://rubygems.org/gems/pygments.rb/versions/0.6.3[pygments.rb 0.6.3]
